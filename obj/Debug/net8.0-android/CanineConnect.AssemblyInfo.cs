@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CanineConnect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+6b5fac22e95a753f5ac0928a04b4c2059c3a9a7e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+bc55e761dd5fd81cd5983dc2109f323bb455bcfc")]
 [assembly: System.Reflection.AssemblyProductAttribute("CanineConnect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CanineConnect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

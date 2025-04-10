@@ -11,33 +11,25 @@
         <Label Text="CONNECT" FontSize="50" FontAttributes="Bold"
                HorizontalOptions="Center" TextColor="Black"/>
 
-        <Entry x:Name="UsernameEntry"
-               Placeholder="Username"
-               BackgroundColor="White"
-               TextColor="Black"
-               PlaceholderColor="Gray"/>
-
-        <Entry x:Name="PasswordEntry"
-               Placeholder="Password"
-               IsPassword="True"
-               BackgroundColor="White"
-               TextColor="Black"
-               PlaceholderColor="Gray"/>
+        <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+            <Image Source="logindog1.png"  HeightRequest="150" WidthRequest="150"/>
+            <Image Source="logindog2.png"  HeightRequest="150" WidthRequest="150"/>
+        </HorizontalStackLayout>
 
         <Button Text="Log In"
-                BackgroundColor="#B7E48A"
+                BackgroundColor="#FFB1F36F"
                 BorderColor="black"
                 BorderWidth="2"
                 TextColor="Black"
                 FontAttributes="Bold"
                 Clicked="OnLoginClicked" />
-
         <Button Text="Create Account"
                 BackgroundColor="#F4A732"
                 BorderColor="black"
                 BorderWidth="2"
                 TextColor="Black"
                 FontAttributes="Bold"
-                Clicked="OnCreateAccountClicked" />
+                Clicked="OnCreateAccountClicked" />        
+
     </VerticalStackLayout>
 </ContentPage>

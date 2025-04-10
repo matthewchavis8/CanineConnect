@@ -11,23 +11,11 @@ public partial class LoginPage : ContentPage
 
     private async void OnLoginClicked(object sender, EventArgs e)
     {
-        string username = UsernameEntry.Text;
-        string password = PasswordEntry.Text;
-
-        if (username == "admin" && password == "password")
-        {
-            await DisplayAlert("Success", "Logged in!", "OK");
-
-            await Navigation.PushAsync(new MainPage()); // Make sure HomePage exists!
-        }
-        else
-        {
-            await DisplayAlert("Login Failed", "Invalid credentials", "Try Again");
-        }
+        await Navigation.PushModalAsync(new LoginModalPage());
     }
 
     private async void OnCreateAccountClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new MainPage()); // You'd create this too
+       await Navigation.PushModalAsync(new LoginModalPage());
     }
 }

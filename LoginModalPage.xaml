@@ -1,0 +1,19 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="YourAppNamespace.LoginModalPage"
+    BackgroundColor="#80000000"> 
+    
+    <Frame VerticalOptions="Center" HorizontalOptions="Center"
+           Padding="20" CornerRadius="10" BackgroundColor="White">
+        <VerticalStackLayout Spacing="15">
+            <Label Text="Log In" FontSize="24" HorizontalOptions="Center" />
+            <Entry x:Name="ModalUsernameEntry" Placeholder="Username"
+                   BackgroundColor="White" TextColor="Black"/>
+            <Entry x:Name="ModalPasswordEntry" Placeholder="Password" 
+                   IsPassword="True" BackgroundColor="White" TextColor="Black"/>
+            <Button Text="Submit" Clicked="OnSubmitClicked"/>
+            <Button Text="Cancel" Clicked="OnCancelClicked"/>
+        </VerticalStackLayout>
+    </Frame>
+</ContentPage>

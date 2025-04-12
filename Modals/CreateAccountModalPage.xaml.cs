@@ -4,12 +4,12 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
+using CanineConnect; 
 
 namespace YourAppNamespace
 {
     public partial class CreateAccountModalPage : ContentPage
     {
-        // Reuse a single HttpClient instance throughout your app.
         private static readonly HttpClient client = new HttpClient();
 
         public CreateAccountModalPage()
@@ -19,42 +19,29 @@ namespace YourAppNamespace
     
         private async void OnSubmitClicked(object sender, EventArgs e)
         {
-            // Prepare the registration payload.
-            // Change "email" to "username" if your PocketBase configuration uses username.
             var payload = new
             {
                 email = ModalUsernameEntry.Text,
                 password = ModalPasswordEntry.Text,
-                passwordConfirm = ModalPasswordEntry.Text  // remove or adjust if not needed
+                passwordConfirm = ModalPasswordEntry.Text 
             };
 
-            // Serialize the payload to JSON.
             string json = JsonSerializer.Serialize(payload);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            try
-            {
-                // Endpoint for creating a new account (registration)
-                var pocketBaseUrl = "https://3d0b-131-95-215-14.ngrok-free.app/api/collections/users/records";
-                
-                // Send the POST request.
+            try {
+                var pocketBaseUrl = "https://2e8a-131-95-215-14.ngrok-free.app/api/collections/users/records";
                 var response = await client.PostAsync(pocketBaseUrl, content);
 
-                if (response.IsSuccessStatusCode)
-                {
+                if (response.IsSuccessStatusCode) {
                     string responseBody = await response.Content.ReadAsStringAsync();
-                    // Optionally, deserialize the response if you need to process the returned data.
                     await DisplayAlert("Success", "Account created successfully!", "OK");
-                    await Navigation.PopModalAsync();
-                }
-                else
-                {
+                    Application.Current.MainPage = new NavigationPage(new MainPage());
+                } else {
                     string errorBody = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Error", "Account creation failed: " + errorBody, "OK");
                 }
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 await DisplayAlert("Error", $"An error occurred: {ex.Message}", "OK");
             }
         }
@@ -63,14 +50,5 @@ namespace YourAppNamespace
         {
             await Navigation.PopModalAsync();
         }
-    }
-
-    // Optionally, you can create a model class if you need to deserialize the response.
-    public class CreateAccountResult
-    {
-        public string Id { get; set; }
-        public string Token { get; set; }
-        public object User { get; set; }
-        // Add additional properties as needed based on PocketBase's response.
     }
 }

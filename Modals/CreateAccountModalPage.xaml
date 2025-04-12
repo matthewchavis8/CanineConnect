@@ -12,7 +12,6 @@
                WidthRequest="300"
                MaximumHeightRequest="350">  
             <VerticalStackLayout Spacing="20">
-                <!-- Updated label for account creation -->
                 <Label Text="Create Account" 
                        FontSize="28" 
                        HorizontalOptions="Center"
@@ -31,7 +30,6 @@
                        TextColor="Black"
                        PlaceholderColor="Gray"
                        FontSize="18"/>
-                <!-- If PocketBase requires a password confirmation, you can add another Entry here -->
                 <Button Text="Submit" 
                         Clicked="OnSubmitClicked"
                         FontAttributes="Bold" 

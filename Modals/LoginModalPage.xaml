@@ -18,7 +18,7 @@
                        FontAttributes="Bold" 
                        TextColor="Black"/>
                 <Entry x:Name="ModalUsernameEntry" 
-                       Placeholder="Email or Username"
+                       Placeholder="Email"
                        BackgroundColor="#FFFFFB"
                        TextColor="Black"
                        PlaceholderColor="Gray"

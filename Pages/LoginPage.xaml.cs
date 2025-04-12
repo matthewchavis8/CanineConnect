@@ -16,6 +16,6 @@ public partial class LoginPage : ContentPage
 
     private async void OnCreateAccountClicked(object sender, EventArgs e)
     {
-       await Navigation.PushModalAsync(new LoginModalPage());
+       await Navigation.PushModalAsync(new CreateAccountModalPage());
     }
 }

@@ -1,0 +1,54 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="YourAppNamespace.CreateAccountModalPage"
+    BackgroundColor="#80FFE066"> 
+    <Grid>
+        <Frame VerticalOptions="Center" HorizontalOptions="Center"
+               Padding="30" CornerRadius="20"
+               BackgroundColor="White"
+               HasShadow="True"
+               BorderColor="Black"
+               WidthRequest="300"
+               MaximumHeightRequest="350">  
+            <VerticalStackLayout Spacing="20">
+                <Label Text="Create Account" 
+                       FontSize="28" 
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold" 
+                       TextColor="Black"/>
+                <Entry x:Name="ModalUsernameEntry" 
+                       Placeholder="Email"
+                       BackgroundColor="#FFFFFB"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="18"/>
+                <Entry x:Name="ModalPasswordEntry" 
+                       Placeholder="Password" 
+                       IsPassword="True" 
+                       BackgroundColor="#FFFFFB"
+                       TextColor="Black"
+                       PlaceholderColor="Gray"
+                       FontSize="18"/>
+                <Button Text="Submit" 
+                        Clicked="OnSubmitClicked"
+                        FontAttributes="Bold" 
+                        TextColor="Black"
+                        BackgroundColor="#4CAF50"
+                        BorderColor="black"
+                        BorderWidth="2"
+                        CornerRadius="10"
+                        Padding="10"/>
+                <Button Text="Cancel" 
+                        Clicked="OnCancelClicked"
+                        FontAttributes="Bold"
+                        BorderColor="black"
+                        BorderWidth="2"
+                        TextColor="Black"
+                        BackgroundColor="#E53935"
+                        CornerRadius="10"
+                        Padding="10"/>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

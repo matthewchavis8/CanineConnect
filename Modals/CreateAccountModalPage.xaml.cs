@@ -30,7 +30,7 @@ namespace YourAppNamespace
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             try {
-                var pocketBaseUrl = "https://2e8a-131-95-215-14.ngrok-free.app/api/collections/users/records";
+                var pocketBaseUrl = "https://14b0-131-95-215-14.ngrok-free.app/api/collections/users/records";
                 var response = await client.PostAsync(pocketBaseUrl, content);
 
                 if (response.IsSuccessStatusCode) {

@@ -1,5 +1,7 @@
 bin/
 obj/
 pb_data/
+pb_data_backup/
+pb_data/types.d.ts
 Properties/
 Platforms/

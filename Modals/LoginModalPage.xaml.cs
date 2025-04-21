@@ -12,7 +12,7 @@ namespace YourAppNamespace
     public partial class LoginModalPage : ContentPage
     {
         private static readonly HttpClient client = new HttpClient();
-        private const string BaseUrl = "https://14b0-131-95-215-14.ngrok-free.app/api";
+        private const string BaseUrl = "https://6412-131-95-215-14.ngrok-free.app/api";
 
         public LoginModalPage()
         {

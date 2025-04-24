@@ -8,12 +8,14 @@
     <Grid RowDefinitions = "20, 40, *">
 
     <!-- Grid Row 1 : Holds the search bar and create new message icon-->
+    <!-- Once the create new message icon is clicked, a new message will be added to the page-->
 
     <!-- Grid Row 2 : Holds the Icons of the pinned messages-->
 
     <!-- Grid Row 3 : Holds the Messages-->
         <CollectionView x:Name='DisplayedMessages'>
             <CollectionView.ItemsLayout>
+            <!-- What will happen when each message is clicked?-->
             <!-- Describes how all the message boxes will be formatted. -->
                 <GridItemsLayout
                     Span = "1"
@@ -26,9 +28,17 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                    <!--Describes how all the message boxes will be formatted.-->
-                    <Grid Margin 
+                    <Grid Margin = "20" Padding ="40"
                      
-                        BackgroundColor = ""
+                        <Border BackgroundColor ="{Binding ColorBackDrop}">
+                        <Grid RowDefinitions = "*, 40, 70 ">
+                        <!-- Grid Row 1: shows that there is an unread/new message"-->
+                        <HorizontalStackLayout Grid.Row = "1">
+                        <!--Grid Row 2: Holds the Profile Picture/ or first letter of that contacts name-->
+                        <!--Grid Row 3: Holds the name, date, and message-->
+                        </Grid>
+
+                
                     >
             
                 </DataTemplate>

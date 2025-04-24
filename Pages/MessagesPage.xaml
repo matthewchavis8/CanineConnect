@@ -1,0 +1,39 @@
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="YourAppNamespace.MessagesPage"
+    BackgroundColor="#FFE066"> 
+
+<ScrollView>
+    <Grid RowDefinitions = "20, 40, *">
+
+    <!-- Grid Row 1 : Holds the search bar and create new message icon-->
+
+    <!-- Grid Row 2 : Holds the Icons of the pinned messages-->
+
+    <!-- Grid Row 3 : Holds the Messages-->
+        <CollectionView x:Name='DisplayedMessages'>
+            <CollectionView.ItemsLayout>
+            <!-- Describes how all the message boxes will be formatted. -->
+                <GridItemsLayout
+                    Span = "1"
+                    VerticalItemSpacing = "20"
+                    HorizontalItemSpacing = "100"
+                    Orientation = "Vertical"
+                />
+            <CollectionView.ItemsLayout>
+                
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                   <!--Describes how all the message boxes will be formatted.-->
+                    <Grid Margin 
+                     
+                        BackgroundColor = ""
+                    >
+            
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ScrollView>
+</ContentPage>

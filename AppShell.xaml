@@ -8,7 +8,6 @@
     Title="CanineConnect">
 
   <TabBar>
-    <!-- Home -->
     <Tab Title="Home" Icon="icon_home.png">
       <ShellContent
         Route="home"
@@ -30,7 +29,7 @@
     <Tab Title="Pups Near You" Icon="icon_pups.png">
       <ShellContent
         Route="pupsNearYou"
-        ContentTemplate="{DataTemplate views:PupsNearYouPage}" />
+        ContentTemplate="{DataTemplate views:PupsNearPage}" />
     </Tab>
 
   </TabBar>

@@ -33,7 +33,7 @@ namespace CanineConnect.Modals
             var result = await TryLogin(email, pass);
             if (result) {
                 await DisplayAlert("Success", "Logged in successfully!", "OK");
-                Application.Current.MainPage = new NavigationPage(new HomePage());
+                Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
             }
         }
 

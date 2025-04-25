@@ -29,7 +29,7 @@
     <Tab Title="Pups Near You" Icon="icon_pups.png">
       <ShellContent
         Route="pupsNearYou"
-        ContentTemplate="{DataTemplate views:PupsNearPage}" />
+        ContentTemplate="{DataTemplate views:PupsNearYouPage}" />
     </Tab>
 
   </TabBar>

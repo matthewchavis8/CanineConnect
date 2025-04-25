@@ -1,49 +1,71 @@
 <ContentPage 
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="YourAppNamespace.MessagesPage"
-    BackgroundColor="#FFE066"> 
+    x:Class="YourAppNamespace.MessagesPage"> 
 
-<ScrollView>
-    <Grid RowDefinitions = "20, 40, *">
+    <ScrollView BackgroundColor ="#FFE066" Grid.Row ="0">
 
-    <!-- Grid Row 1 : Holds the search bar and create new message icon-->
-    <!-- Once the create new message icon is clicked, a new message will be added to the page-->
+        <Grid RowDefinitions ="*, *,200, *" Padding="10, 10, 10, 100" Margin="5">
+            <VerticalStackLayout>
 
-    <!-- Grid Row 2 : Holds the Icons of the pinned messages-->
+                <HorizontalStackLayout HorizontalOptions ="Center" Grid.Row ="1" MaximumWidthRequest="2000" MaximumHeightRequest="800"  Padding="10, 10, 10, 80">
+                    <Label Text="Search:"
+                           FontSize="20"
+                                        />
+                    <Entry Placeholder="search for message"
+                           BackgroundColor=" White"
+                           WidthRequest="500"
+                            />
+                </HorizontalStackLayout>
+              
 
-    <!-- Grid Row 3 : Holds the Messages-->
-        <CollectionView x:Name='DisplayedMessages'>
-            <CollectionView.ItemsLayout>
-            <!-- What will happen when each message is clicked?-->
-            <!-- Describes how all the message boxes will be formatted. -->
-                <GridItemsLayout
-                    Span = "1"
-                    VerticalItemSpacing = "20"
-                    HorizontalItemSpacing = "100"
-                    Orientation = "Vertical"
-                />
-            <CollectionView.ItemsLayout>
+                    <!-- Creating the circle for the pinned Messages-->
                 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                   <!--Describes how all the message boxes will be formatted.-->
-                    <Grid Margin = "20" Padding ="40"
-                     
-                        <Border BackgroundColor ="{Binding ColorBackDrop}">
-                        <Grid RowDefinitions = "*, 40, 70 ">
-                        <!-- Grid Row 1: shows that there is an unread/new message"-->
-                        <HorizontalStackLayout Grid.Row = "1">
-                        <!--Grid Row 2: Holds the Profile Picture/ or first letter of that contacts name-->
-                        <!--Grid Row 3: Holds the name, date, and message-->
-                        </Grid>
+              
+  
+                    <Ellipse  Grid.Row="2" Grid.Column="1"  x:Name="ProfileIconForMessage"
+                             Fill=" white" WidthRequest = "100" HeightRequest="100"/>
+                <Rectangle/>
 
-                
-                    >
-            
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </Grid>
-</ScrollView>
+
+                <!-- Grid Row 1 : Holds the search bar and create new message icon-->
+            <!-- Once the create new message icon is clicked, a new message will be added to the page-->
+
+            <!-- Grid Row 2 : Holds the Icons of the pinned messages-->
+
+            <!-- Grid Row 3 : Holds the Messages-->
+                <CollectionView x:Name='DisplayedMessages'>
+                    <CollectionView.ItemsLayout>
+                        <!-- What will happen when each message is clicked?-->
+                        <!-- Describes how all the message boxes will be formatted. -->
+                        <GridItemsLayout
+                        Span = "1"
+                        VerticalItemSpacing = "20"
+                        HorizontalItemSpacing = "100"
+                        Orientation = "Vertical"
+                    />
+
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <!--Describes how all the message boxes will be formatted.-->
+                            <Grid Margin="20" Padding="40 ">
+
+                                <Grid RowDefinitions = "*, 40, 70 ">
+                                    <!-- Grid Row 1: shows that there is an unread/new message"-->
+                                    <HorizontalStackLayout Grid.Row = "1">
+                                        <!--Grid Row 2: Holds the Profile Picture/ or first letter of that contacts name-->
+                                        <!--Grid Row 3: Holds the name, date, and message-->
+                                    </HorizontalStackLayout>
+                                </Grid>
+
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </VerticalStackLayout>
+        </Grid>
+    </ScrollView>
+
 </ContentPage>

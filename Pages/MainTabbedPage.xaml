@@ -4,10 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:CanineConnect.Pages"
     x:Class="CanineConnect.Pages.MainTabbedPage"
-    BarBackgroundColor="#FFF"
-    BarTextColor="#333"
-    SelectedTabColor="#0066CC"
-    UnselectedTabColor="#888">
+    
+    BackgroundColor="#FFE066"
+
+    BarBackgroundColor="#FFE066"
+    BarTextColor="Black"
+    SelectedTabColor="Black"
+    UnselectedTabColor="#333">
 
     <pages:HomePage
         Title="Home"

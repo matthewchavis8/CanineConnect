@@ -37,7 +37,7 @@ namespace CanineConnect.Modals
                 if (response.IsSuccessStatusCode) {
                     string responseBody = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Success", "Account created successfully!", "OK");
-                    Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
+                    Application.Current.MainPage = new MainTabbedPage();
                 } else {
                     string errorBody = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Error", "Account creation failed: " + errorBody, "OK");

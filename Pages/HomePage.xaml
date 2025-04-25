@@ -5,5 +5,7 @@
   Title="Home">
   <StackLayout>
     <Label Text="🏠 Home" />
+    <Label Text="🏠 Home" />
+    <Label Text="🏠 Home" />
   </StackLayout>
 </ContentPage>

@@ -9,24 +9,24 @@
     SelectedTabColor="#0066CC"
     UnselectedTabColor="#888">
 
-    <!-- Default/Home tab -->
     <pages:HomePage
         Title="Home"
-        IconImageSource="home.png" />
+        IconImageSource="logindog1.png"
+    />
 
-    <!-- Breed matching tab -->
     <pages:BreedMatchingPage
         Title="Breed Match"
-        IconImageSource="breed.png" />
+        IconImageSource="logindog1.png"
+    />
 
-    <!-- Messages tab -->
     <pages:MessagesPage
         Title="Messages"
-        IconImageSource="messages.png" />
+        IconImageSource="logindog1.png"
+    />
 
-    <!-- Pups near you tab -->
     <pages:PupsNearYouPage
         Title="Pups Near You"
-        IconImageSource="puppy.png" />
+         IconImageSource="logindog1.png"
+    />
 
 </TabbedPage>

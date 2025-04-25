@@ -14,22 +14,22 @@
 
     <pages:HomePage
         Title="Home"
-        IconImageSource="logindog1.png"
+        IconImageSource="homeicon.png"
     />
 
     <pages:BreedMatchingPage
         Title="Breed Match"
-        IconImageSource="logindog1.png"
+        IconImageSource="matching.png"
     />
 
     <pages:MessagesPage
         Title="Messages"
-        IconImageSource="logindog1.png"
+        IconImageSource="messagesicon.png"
     />
 
     <pages:PupsNearYouPage
         Title="Pups Near You"
-         IconImageSource="logindog1.png"
+         IconImageSource="dogsnearyouicon.png"
     />
 
 </TabbedPage>

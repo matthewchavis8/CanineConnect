@@ -1,15 +1,37 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Shell
     x:Class="CanineConnect.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:CanineConnect"
+    xmlns:views="clr-namespace:CanineConnect.Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="CanineConnect">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+  <TabBar>
+    <!-- Home -->
+    <Tab Title="Home" Icon="icon_home.png">
+      <ShellContent
+        Route="home"
+        ContentTemplate="{DataTemplate views:HomePage}" />
+    </Tab>
 
+    <Tab Title="Messages" Icon="icon_messages.png">
+      <ShellContent
+        Route="messages"
+        ContentTemplate="{DataTemplate views:MessagesPage}" />
+    </Tab>
+
+    <Tab Title="Breed Matching" Icon="icon_breed.png">
+      <ShellContent
+        Route="breedMatching"
+        ContentTemplate="{DataTemplate views:BreedMatchingPage}" />
+    </Tab>
+
+    <Tab Title="Pups Near You" Icon="icon_pups.png">
+      <ShellContent
+        Route="pupsNearYou"
+        ContentTemplate="{DataTemplate views:PupsNearYouPage}" />
+    </Tab>
+
+  </TabBar>
 </Shell>

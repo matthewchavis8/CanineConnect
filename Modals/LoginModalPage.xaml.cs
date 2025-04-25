@@ -6,8 +6,9 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using CanineConnect;
+using CanineConnect.Pages;
 
-namespace YourAppNamespace
+namespace CanineConnect.Modals
 {
     public partial class LoginModalPage : ContentPage
     {
@@ -32,7 +33,7 @@ namespace YourAppNamespace
             var result = await TryLogin(email, pass);
             if (result) {
                 await DisplayAlert("Success", "Logged in successfully!", "OK");
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = new NavigationPage(new HomePage());
             }
         }
 

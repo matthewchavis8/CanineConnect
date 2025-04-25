@@ -1,10 +1,10 @@
-﻿namespace CanineConnect;
+﻿namespace CanineConnect.Pages;
 
-public partial class MainPage : ContentPage
+public partial class HomePage : ContentPage
 {
 	int count = 0;
 
-	public MainPage()
+	public HomePage()
 	{
 		InitializeComponent();
 	}

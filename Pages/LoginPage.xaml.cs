@@ -1,6 +1,6 @@
-using CanineConnect;
+using CanineConnect.Modals;
 
-namespace YourAppNamespace;
+namespace CanineConnect.Pages;
 
 public partial class LoginPage : ContentPage
 {

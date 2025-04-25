@@ -6,13 +6,14 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
 using CanineConnect;
+using CanineConnect.Pages;
 
-namespace YourAppNamespace
+namespace CanineConnect.Modals
 {
     public partial class LoginModalPage : ContentPage
     {
         private static readonly HttpClient client = new HttpClient();
-        private const string BaseUrl = "https://6412-131-95-215-14.ngrok-free.app/api";
+        private const string BaseUrl = "https://cf03-131-95-215-14.ngrok-free.app/api";
 
         public LoginModalPage()
         {
@@ -32,7 +33,7 @@ namespace YourAppNamespace
             var result = await TryLogin(email, pass);
             if (result) {
                 await DisplayAlert("Success", "Logged in successfully!", "OK");
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = new MainTabbedPage();
             }
         }
 

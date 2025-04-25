@@ -4,9 +4,10 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Maui.Controls;
-using CanineConnect; 
+using CanineConnect;
+using CanineConnect.Pages;
 
-namespace YourAppNamespace
+namespace CanineConnect.Modals
 {
     public partial class CreateAccountModalPage : ContentPage
     {
@@ -30,13 +31,13 @@ namespace YourAppNamespace
             var content = new StringContent(json, Encoding.UTF8, "application/json");
 
             try {
-                var pocketBaseUrl = "https://6412-131-95-215-14.ngrok-free.app/api/collections/users/records";
+                var pocketBaseUrl = "https://cf03-131-95-215-14.ngrok-free.app/api/collections/users/records";
                 var response = await client.PostAsync(pocketBaseUrl, content);
 
                 if (response.IsSuccessStatusCode) {
                     string responseBody = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Success", "Account created successfully!", "OK");
-                    Application.Current.MainPage = new NavigationPage(new MainPage());
+                    Application.Current.MainPage = new MainTabbedPage();
                 } else {
                     string errorBody = await response.Content.ReadAsStringAsync();
                     await DisplayAlert("Error", "Account creation failed: " + errorBody, "OK");

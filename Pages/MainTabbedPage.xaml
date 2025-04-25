@@ -4,29 +4,32 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:CanineConnect.Pages"
     x:Class="CanineConnect.Pages.MainTabbedPage"
-    BarBackgroundColor="#FFF"
-    BarTextColor="#333"
-    SelectedTabColor="#0066CC"
-    UnselectedTabColor="#888">
+    
+    BackgroundColor="#FFE066"
+
+    BarBackgroundColor="#FFE066"
+    BarTextColor="Black"
+    SelectedTabColor="Black"
+    UnselectedTabColor="#333">
 
     <pages:HomePage
         Title="Home"
-        IconImageSource="logindog1.png"
+        IconImageSource="homeicon.png"
     />
 
     <pages:BreedMatchingPage
         Title="Breed Match"
-        IconImageSource="logindog1.png"
+        IconImageSource="matching.png"
     />
 
     <pages:MessagesPage
         Title="Messages"
-        IconImageSource="logindog1.png"
+        IconImageSource="messagesicon.png"
     />
 
     <pages:PupsNearYouPage
         Title="Pups Near You"
-         IconImageSource="logindog1.png"
+         IconImageSource="dogsnearyouicon.png"
     />
 
 </TabbedPage>

@@ -1,11 +1,57 @@
-﻿<ContentPage
-  x:Class="CanineConnect.Pages.HomePage"
-  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-  Title="Home">
-  <StackLayout>
-    <Label Text="🏠 Home" />
-    <Label Text="🏠 Home" />
-    <Label Text="🏠 Home" />
-  </StackLayout>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CanineConnect.Pages.HomePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="#FFE066"
+    Title="Home">
+
+  <VerticalStackLayout Padding="20" Spacing="20">
+    <Label
+        Text="Your Pups"
+        FontSize="36"
+        FontAttributes="Bold"
+        HorizontalOptions="Center" />
+
+    <CollectionView
+        x:Name="PetsCollection"
+        VerticalOptions="FillAndExpand"
+        ItemsLayout="VerticalList">
+      <CollectionView.ItemTemplate>
+        <DataTemplate>
+          <Frame
+              BorderColor="Black"
+              CornerRadius="10"
+              BackgroundColor="#FFF9E5"
+              Padding="10"
+              Margin="0,0,0,10">
+            <Grid ColumnDefinitions="*,Auto">
+              <VerticalStackLayout Spacing="4">
+                <Label Text="{Binding Name}" FontSize="18" FontAttributes="Bold" />
+                <Label Text="{Binding Age, StringFormat='Age: {0}'}" />
+                <Label Text="{Binding Gender, StringFormat='Gender: {0}'}" />
+                <Label Text="{Binding Size, StringFormat='Size: {0}'}" />
+                <Label Text="{Binding Breed, StringFormat='Breed: {0}'}" />
+              </VerticalStackLayout>
+              <Image
+                  Grid.Column="1"
+                  Source="{Binding Image}"
+                  Aspect="AspectFill"
+                  HeightRequest="100"
+                  WidthRequest="100"
+                  Margin="10,0,0,0" />
+            </Grid>
+          </Frame>
+        </DataTemplate>
+      </CollectionView.ItemTemplate>
+    </CollectionView>
+
+    <Button
+        Text="Add Another Pup"
+        BackgroundColor="#F4A732"
+        TextColor="Black"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"
+        Clicked="OnAddPupClicked" />
+  </VerticalStackLayout>
 </ContentPage>

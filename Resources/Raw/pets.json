@@ -1,0 +1,30 @@
+[
+    {
+      "id": "1",
+      "image": "dog1.webp",
+      "name": "Princess",
+      "age": "10 months",
+      "Gender": "Female",
+      "size": "Small",
+      "breed": "tibetan mastiff"
+    },
+    {
+      "id": "2",
+      "image": "dog2.png",
+      "name": "Cujo",
+      "age": "5",
+      "Gender": "Male",
+      "size": "Medium",
+      "breed": "Saint Bernard"
+    },
+    {
+      "id": "3",
+      "image": "dog3.jpeg",
+      "name": "Pomkori",
+      "age": "6",
+      "Gender": "Male",
+      "size": "Large",
+      "breed": "Pomeranian"
+    }
+  ]
+  

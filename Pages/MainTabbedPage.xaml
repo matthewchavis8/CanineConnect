@@ -5,9 +5,9 @@
     xmlns:pages="clr-namespace:CanineConnect.Pages"
     x:Class="CanineConnect.Pages.MainTabbedPage"
     
-    BackgroundColor="#FFE066"
+    BackgroundColor="#FFFFD900"
 
-    BarBackgroundColor="#FFE066"
+    BarBackgroundColor="#E5F7BF07"
     BarTextColor="Black"
     SelectedTabColor="Black"
     UnselectedTabColor="#333">

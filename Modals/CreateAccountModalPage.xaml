@@ -11,7 +11,7 @@
                BorderColor="Black"
                WidthRequest="300"
                MaximumHeightRequest="350">  
-            <VerticalStackLayout Spacing="20">
+            <VerticalStackLayout Spacing="15">
                 <Label Text="Create Account" 
                        FontSize="28" 
                        HorizontalOptions="Center"

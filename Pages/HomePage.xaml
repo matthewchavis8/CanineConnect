@@ -8,7 +8,7 @@
 
   <VerticalStackLayout Padding="20" Spacing="20">
     <Label
-        Text="Your Pups"
+        Text="Your Pets"
         FontSize="36"
         FontAttributes="Bold"
         HorizontalOptions="Center" />
